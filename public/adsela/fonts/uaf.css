@@ -1,0 +1,13 @@
+				@font-face {
+					font-family: 'pingar';
+					src: url('/wp-content/uploads/useanyfont/5319PingAR.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5319PingAR.woff') format('woff');
+					font-weight: 400; font-style: normal;  font-display: auto;
+				}
+
+				.pingar{font-family: 'pingar' !important;}
+
+						h1, h2, h3, h4, h5, h6, .entry-title, body.single-post .entry-title, body.page .entry-title, body.category .entry-title, .widget-title, .site-title, .site-description, body, p, blockquote, li, a, strong, b, em, .menu-adsela-menu-ar-container li a, .menu-adsela-menu-ar-container li span, #menu-adsela-menu-ar li a, #menu-adsela-menu-ar li span, .menu-category-menu-container li a, .menu-category-menu-container li span, #menu-category-menu li a, #menu-category-menu li span, .menu-footer-ar-container li a, .menu-footer-ar-container li span, #menu-footer-ar li a, #menu-footer-ar li span, .menu-footer-quick-links-menu-container li a, .menu-footer-quick-links-menu-container li span, #menu-footer-quick-links-menu li a, #menu-footer-quick-links-menu li span, .menu-header-sitebar-menu-container li a, .menu-header-sitebar-menu-container li span, #menu-header-sitebar-menu li a, #menu-header-sitebar-menu li span, .menu-help-menu-container li a, .menu-help-menu-container li span, #menu-help-menu li a, #menu-help-menu li span, .menu-main-menu-container li a, .menu-main-menu-container li span, #menu-main-menu li a, #menu-main-menu li span, .menu--container li a, .menu--container li span, #menu- li a, #menu- li span, .menu---container li a, .menu---container li span, #menu-- li a, #menu-- li span{
+					font-family: 'pingar' !important;
+				}
+		

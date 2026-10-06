@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    DirectoryIndex index.html
+
+    # Homepage: static Basma site (avoids XAMPP PHP < 8.4 Laravel boot)
+    RewriteRule ^$ index.html [L]
+
+    # Existing files (index.html, public/...) serve as-is
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Fallback into public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

@@ -1,0 +1,368 @@
+:root {
+  --ink: #061018;
+  --ink-2: #0c1a24;
+  --fog: #d7e6ef;
+  --mute: #8aa3b5;
+  --teal: #00d4c4;
+  --line: rgba(215, 230, 239, 0.12);
+  --font: "Cairo", "Segoe UI", Tahoma, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--fog);
+  background: var(--ink);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.auth-body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 0%, rgba(0, 212, 196, 0.16), transparent 60%),
+    linear-gradient(160deg, #070b14, #0d1524 50%, #061018);
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 2rem;
+  background: rgba(12, 26, 36, 0.9);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.auth-logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.auth-card h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.6rem;
+}
+
+.auth-lead {
+  margin: 0 0 1.4rem;
+  color: var(--mute);
+}
+
+.auth-error {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: rgba(220, 60, 80, 0.15);
+  border: 1px solid rgba(220, 60, 80, 0.35);
+  color: #ff8ea0;
+  font-weight: 700;
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--fog);
+  padding: 0.85rem 1rem;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: rgba(0, 212, 196, 0.55);
+  box-shadow: 0 0 0 4px rgba(0, 212, 196, 0.12);
+}
+
+.auth-remember {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600 !important;
+  color: var(--mute);
+}
+
+.auth-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--teal), #00a89c);
+  color: #042029;
+  box-shadow: 0 10px 28px rgba(0, 212, 196, 0.28);
+}
+
+.dash-body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: var(--ink);
+}
+
+.dash-sidebar {
+  border-inline-end: 1px solid var(--line);
+  background: var(--ink-2);
+  padding: 1.4rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.5rem;
+}
+
+.dash-brand img {
+  height: 48px;
+  width: auto;
+}
+
+.dash-nav {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.dash-nav a {
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  color: var(--mute);
+  font-weight: 700;
+}
+
+.dash-nav a.is-active,
+.dash-nav a:hover {
+  background: rgba(0, 212, 196, 0.1);
+  color: var(--teal);
+}
+
+.dash-logout button {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--fog);
+  border-radius: 12px;
+  padding: 0.75rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dash-logout button:hover {
+  border-color: rgba(0, 212, 196, 0.45);
+  color: var(--teal);
+}
+
+.dash-main {
+  padding: 1.6rem 1.8rem 2.5rem;
+}
+
+.dash-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.6rem;
+}
+
+.dash-top h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.7rem;
+}
+
+.dash-top p {
+  margin: 0;
+  color: var(--mute);
+}
+
+.dash-user {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.stat {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stat span {
+  display: block;
+  color: var(--mute);
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+}
+
+.stat strong {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.dash-panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem 1.4rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dash-panel h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.15rem;
+}
+
+.dash-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.dash-panel li {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--mute);
+}
+
+.dash-panel li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.dash-empty {
+  margin: 0;
+  color: var(--mute);
+}
+
+.dash-meta {
+  margin: 1rem 0 0;
+  color: var(--mute);
+  font-size: 0.9rem;
+}
+
+.dash-table-wrap {
+  overflow-x: auto;
+}
+
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dash-table th,
+.dash-table td {
+  text-align: start;
+  padding: 0.75rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.dash-table th {
+  color: var(--mute);
+  font-weight: 700;
+}
+
+.dash-table td {
+  color: var(--fog);
+}
+
+.dash-alert {
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.dash-alert--success {
+  background: rgba(0, 212, 196, 0.12);
+  border: 1px solid rgba(0, 212, 196, 0.35);
+  color: var(--teal);
+}
+
+.dash-alert--error {
+  background: rgba(220, 60, 80, 0.15);
+  border: 1px solid rgba(220, 60, 80, 0.35);
+  color: #ff8ea0;
+}
+
+.settings-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 520px;
+}
+
+.settings-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.settings-form input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--fog);
+  padding: 0.85rem 1rem;
+  outline: none;
+  font: inherit;
+}
+
+.settings-form input:focus {
+  border-color: rgba(0, 212, 196, 0.55);
+  box-shadow: 0 0 0 4px rgba(0, 212, 196, 0.12);
+}
+
+.settings-submit {
+  width: fit-content;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 980px) {
+  .dash-body {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-sidebar {
+    grid-template-rows: auto auto auto;
+  }
+
+  .dash-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dash-stats {
+    grid-template-columns: 1fr;
+  }
+}

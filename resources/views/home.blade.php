@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="بصمة — وكالة نمو رقمي تساعد الشركات في السعودية على بناء حضور قوي، حملات أدق، ومبيعات قابلة للقياس.">
+    <title>بصمة | وكالة نمو رقمي في السعودية</title>
+    <link rel="icon" href="{{ asset('brand/basma-logo.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/basma.css') }}?v=header-struct2">
+</head>
+<body>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="site">
+    <header class="header" data-header>
+        <div class="header__inner">
+            <a class="logo" href="{{ url('/') }}" aria-label="بصمة">
+                <img src="{{ asset('brand/basma-logo-white.png') }}" alt="بصمة">
+            </a>
+
+            <nav class="nav" aria-label="القائمة الرئيسية">
+                <a class="is-active" href="#top">الرئيسية</a>
+                <a href="#services">خدماتنا</a>
+                <a href="#work">أعمالنا</a>
+                <a href="#about">من نحن</a>
+            </nav>
+
+            <div class="header__actions">
+                <a class="btn btn--teal btn--nav" href="#contact">احجز استشارة مجانية</a>
+                <a class="lang-switch" href="#top" aria-label="English">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.4 9h-2.6a15.5 15.5 0 0 0-1.3-5 8.05 8.05 0 0 1 3.9 5zM12 4c.9 0 2.3 2.1 2.9 5H9.1C9.7 6.1 11.1 4 12 4zM4.1 14a8.05 8.05 0 0 1 0-4h2.8a17.4 17.4 0 0 0 0 4zm.5 2h2.6a15.5 15.5 0 0 0 1.3 5 8.05 8.05 0 0 1-3.9-5zM9.1 15h5.8c-.6 2.9-2 5-2.9 5s-2.3-2.1-2.9-5zm5.8-2H9.1a17.4 17.4 0 0 1 0-4h5.8a17.4 17.4 0 0 1 0 4zm.9 7a15.5 15.5 0 0 0 1.3-5h2.6a8.05 8.05 0 0 1-3.9 5zM16.6 9h2.6a8.05 8.05 0 0 0-3.9-5 15.5 15.5 0 0 1 1.3 5zM7.4 4a8.05 8.05 0 0 0-3.9 5h2.6a15.5 15.5 0 0 1 1.3-5z"/></svg>
+                    <span>EN</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" type="button" data-menu-toggle aria-label="فتح القائمة">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav" data-mobile-nav aria-hidden="true">
+        <div class="mobile-nav__backdrop" data-menu-close></div>
+        <div class="mobile-nav__panel">
+            <a class="logo" href="{{ url('/') }}"><img src="{{ asset('brand/basma-logo-white.png') }}" alt="بصمة"></a>
+            <a href="#top" data-menu-close>الرئيسية</a>
+            <a href="#services" data-menu-close>خدماتنا</a>
+            <a href="#work" data-menu-close>أعمالنا</a>
+            <a href="#about" data-menu-close>من نحن</a>
+            <a class="btn btn--teal" href="#contact" data-menu-close>احجز استشارة مجانية</a>
+            <a class="lang-switch" href="#top" data-menu-close>EN</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="top">
+            <div class="hero__media" aria-hidden="true"></div>
+            <div class="hero__grid">
+                <h1>
+                    <span class="hero__keep">من الفكرة إلى …النمو</span><br>
+                    <span class="hero__accent">بصمة</span> تبني أثر<br>
+                    علامتك
+                </h1>
+                <p class="hero__lead">نجمع الاستراتيجية والتصميم والمحتوى والحملات في مسار واحد، من أول ظهور لعلامتك حتى طلب عميل يمكنك قياسه بالأرقام.</p>
+                <div class="hero__pills">
+                    <span class="hero__pill">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l2.4 7.2H22l-6 4.4 2.3 7L12 16.6 5.7 20.6 8 13.6 2 9.2h7.6L12 2z"/></svg>
+                        +120 جهة وشركة وثقت بنا
+                    </span>
+                    <span class="hero__pill">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-8 2-8 4v2h16v-2c0-2-4-4-8-4z"/></svg>
+                        فريق متخصص لكل مشروع
+                    </span>
+                </div>
+                <div class="hero__actions">
+                    <a class="btn btn--teal" href="#contact">احجز استشارتك المجانية</a>
+                    <a class="btn btn--ghost" href="#services">اكتشف خدماتنا <span class="btn__arrow" aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container partners__row reveal">
+                <p class="partners__label">نعمل بأدوات المنصات التي يعتمدها قادة السوق</p>
+                <div class="partners__logos">
+                    <span class="chip chip--accent">
+                        <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h5.9c-.3 1.4-1.1 2.5-2.3 3.3v2.7h3.7c2.2-2 3.2-5 3.2-8.1z"/>
+                            <path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.7l-3.7-2.7c-1 .7-2.4 1.1-3.9 1.1-3 0-5.6-2-6.5-4.7H1.7v2.8C3.6 20.7 7.5 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.5 14c-.2-.7-.4-1.4-.4-2.1s.1-1.4.4-2.1V7H1.7C.9 8.5.5 10.2.5 12s.4 3.5 1.2 5l3.8-3z"/>
+                            <path fill="#EA4335" d="M12 4.8c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1.3 15.1.2 12 .2 7.5.2 3.6 2.5 1.7 6.2L5.5 9c.9-2.7 3.5-4.2 6.5-4.2z"/>
+                        </svg>
+                        Google Ads
+                    </span>
+                    <span class="chip">
+                        <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="#0081FB" d="M16.5 2h-2.7C10.8 2 9 3.9 9 6.7V9H6.5v3.3H9V22h3.7v-9.7h2.8l.6-3.3h-3.4V7c0-1 .3-1.6 1.7-1.6h1.9V2z"/>
+                        </svg>
+                        Meta
+                    </span>
+                    <span class="chip">
+                        <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="#fff" d="M19.6 7.4a5.4 5.4 0 0 1-3.1-1v7.2a5.1 5.1 0 1 1-4.4-5v2.7a2.5 2.5 0 1 0 1.8 2.4V2.5h2.6a5.4 5.4 0 0 0 3.1 3.1v1.8z"/>
+                        </svg>
+                        TikTok
+                    </span>
+                    <span class="chip">
+                        <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="#FFFC00" d="M12.1 2C7.1 2 3.5 5.4 3.5 10.7c0 3.4 1.8 5.6 2.9 5.6.4 0 .7-.5.7-1.2 0-.3-.1-.7-.3-1.1-.6-1.4-1.1-2.7-1.1-4.1 0-3.4 2.6-6.5 6.7-6.5 3.6 0 5.6 2.2 5.6 5.1 0 3.9-1.7 7.1-4.3 7.1-1.4 0-2.4-1.2-2.1-2.6.4-1.6 1.1-3.4 1.1-4.5 0-1-.6-1.9-1.7-1.9-1.4 0-2.5 1.4-2.5 3.3 0 1.2.4 2 .4 2s-1.4 5.8-1.6 6.8c-.5 2-.1 4.5-.1 4.7 0 .1.1.1.1 0 .1-.2 1.5-1.9 2-3.5.1-.5.8-3.1.8-3.1.4.8 1.6 1.5 2.8 1.5 3.7 0 6.3-3.4 6.3-8 0-3.5-2.9-6.8-7.4-6.8z"/>
+                        </svg>
+                        Snapchat
+                    </span>
+                    <span class="chip">
+                        <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="#00D4C4" d="M10.5 3a7.5 7.5 0 1 0 4.7 13.3l4.2 4.2 1.4-1.4-4.2-4.2A7.5 7.5 0 0 0 10.5 3zm0 2a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/>
+                        </svg>
+                        SEO / GEO
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about__grid">
+                <div class="reveal">
+                    <div class="section__head">
+                        <div class="eyebrow">من نحن</div>
+                        <h2>بصمة… شريكك الذي يحوّل التسويق إلى نمو حقيقي</h2>
+                        <p>في بصمة نجمع الاستراتيجية والإبداع والبيانات في فريق واحد يعمل كأنه امتداد لإدارتك التسويقية، بوضوح في الأهداف وشفافية كاملة في النتائج.</p>
+                    </div>
+                    <div class="about__points">
+                        <div class="point">
+                            <div class="point__num">01</div>
+                            <div>
+                                <h3>قرارات مبنية على فهم السوق</h3>
+                                <p>نبدأ بدراسة عميلك ومنافسيك قبل صرف أي ريال على الإعلانات.</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <div class="point__num">02</div>
+                            <div>
+                                <h3>تنفيذ سريع بإيقاع ثابت</h3>
+                                <p>إطلاق، قياس، وتحسين أسبوعي يقرّبك من هدف الإيراد.</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <div class="point__num">03</div>
+                            <div>
+                                <h3>رسالة واحدة بصوت واضح</h3>
+                                <p>هوية بصرية ومحتوى يجعلان علامتك مألوفة وسهلة التذكّر.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__visual reveal" aria-hidden="true">
+                    <div class="about__badge">
+                        <strong>أثر ملموس</strong>
+                        <span>من الظهور إلى الطلب</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section__head reveal">
+                    <div class="eyebrow">خدماتنا</div>
+                    <h2>حلول رقمية تبني حضورك وتحوّل اهتمام العملاء إلى مبيعات</h2>
+                    <p>نبدأ من حيث تقف علامتك اليوم، ونصمم لك المزيج المناسب: إطلاق، أو توسّع، أو إعادة ترتيب أولويات القنوات.</p>
+                </div>
+                <div class="services__list">
+                    <a class="service reveal" href="#contact">
+                        <div class="service__num">01</div>
+                        <h3>متاجر إلكترونية تنمو بتجارتك</h3>
+                        <p>متجر مُصمّم للتحويل، ورحلة شراء سلسة، وحملات تجلب طلبات حقيقية لا نقرات فارغة.</p>
+                        <span class="service__arrow" aria-hidden="true">←</span>
+                    </a>
+                    <a class="service reveal" href="#contact">
+                        <div class="service__num">02</div>
+                        <h3>مواقع تحوّل الزائر إلى عميل</h3>
+                        <p>تصميم وتجربة استخدام تشرح قيمة عرضك في ثوانٍ، وتدفع الزائر لاتخاذ القرار.</p>
+                        <span class="service__arrow" aria-hidden="true">←</span>
+                    </a>
+                    <a class="service reveal" href="#contact">
+                        <div class="service__num">03</div>
+                        <h3>إعلانات مدفوعة بعائد واضح</h3>
+                        <p>ندير ميزانيتك على جوجل ومنصات التواصل لنخفّض تكلفة اكتساب العميل ونرفع العائد.</p>
+                        <span class="service__arrow" aria-hidden="true">←</span>
+                    </a>
+                    <a class="service reveal" href="#contact">
+                        <div class="service__num">04</div>
+                        <h3>إدارة المنصات الاجتماعية</h3>
+                        <p>محتوى وخطة نشر تبني مجتمعًا متفاعلًا، وتُبقي علامتك حاضرة في بال جمهورك كل يوم.</p>
+                        <span class="service__arrow" aria-hidden="true">←</span>
+                    </a>
+                    <a class="service reveal" href="#contact">
+                        <div class="service__num">05</div>
+                        <h3>صدارة في محركات البحث</h3>
+                        <p>SEO وGEO لتظهر في أول النتائج وفي إجابات الذكاء الاصطناعي، وتلتقط العميل وهو جاهز للشراء.</p>
+                        <span class="service__arrow" aria-hidden="true">←</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="method">
+            <div class="container">
+                <div class="section__head reveal">
+                    <div class="eyebrow">منهجيتنا</div>
+                    <h2>أربع خطوات… من الفرضية إلى النتيجة</h2>
+                    <p>عملية واضحة تقلل التجربة العشوائية وتسرّع التعلّم من السوق.</p>
+                </div>
+                <div class="method__grid">
+                    <article class="step reveal">
+                        <div class="step__n">الخطوة 01</div>
+                        <h3>تشخيص الواقع</h3>
+                        <p>مراجعة القنوات، البيانات، والعرض الحالي لنقاط القوة والهدر.</p>
+                    </article>
+                    <article class="step reveal">
+                        <div class="step__n">الخطوة 02</div>
+                        <h3>رسم المسار</h3>
+                        <p>أهداف ربع سنوية، رسائل رئيسية، وخطة قنوات مرتبطة بالميزانية.</p>
+                    </article>
+                    <article class="step reveal">
+                        <div class="step__n">الخطوة 03</div>
+                        <h3>إطلاق محسوم</h3>
+                        <p>إنتاج الأصول وتشغيل الحملات باختبارات قصيرة وقرارات سريعة.</p>
+                    </article>
+                    <article class="step reveal">
+                        <div class="step__n">الخطوة 04</div>
+                        <h3>قياس وتحسين</h3>
+                        <p>لوحات متابعة أسبوعية تعيد توجيه الإنفاق لما يحقق أثرًا.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section__head reveal">
+                    <div class="eyebrow">نماذج أعمال</div>
+                    <h2>علامات اختارت أن تترك أثرًا أوضح</h2>
+                    <p>نماذج من قطاعات مختلفة — التفاصيل الكاملة نشاركها في جلسة التعريف.</p>
+                </div>
+                <div class="work__grid">
+                    <article class="work-item reveal">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" alt="تجارة تجزئة">
+                        <div class="work-item__body">
+                            <span>تجارة تجزئة</span>
+                            <h3>إعادة بناء مسار الشراء</h3>
+                        </div>
+                    </article>
+                    <article class="work-item reveal">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="خدمات أعمال">
+                        <div class="work-item__body">
+                            <span>B2B</span>
+                            <h3>توليد طلب نوعي للفرق البيعية</h3>
+                        </div>
+                    </article>
+                    <article class="work-item reveal">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="منتج استهلاكي">
+                        <div class="work-item__body">
+                            <span>منتجات</span>
+                            <h3>إطلاق هوية وحملة تعريفية</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta" id="contact">
+            <div class="container">
+                <div class="cta__panel reveal">
+                    <div>
+                        <div class="eyebrow">تواصل</div>
+                        <h2>احجز جلسة تشخيص مجانية لمدة 30 دقيقة</h2>
+                        <p>نراجع وضع علامتك الحالي، ونخرج معك بأول ثلاث خطوات عملية قابلة للتنفيذ، بدون أي التزام.</p>
+                        <ul class="cta__list">
+                            <li>نحدد لك أكبر فرصة نمو خلال 90 يومًا</li>
+                            <li>نقدّر لك القنوات الأنسب لميزانيتك</li>
+                            <li>نقترح خطة محتوى وإعلانات مختصرة لتنطلق بها</li>
+                        </ul>
+                    </div>
+                    <form class="form" data-lead-form action="{{ route('leads.store') }}" method="POST">
+                        @csrf
+                        <label>
+                            الاهتمام
+                            <select name="interest" required>
+                                <option value="" selected disabled>اختر الخدمة التي تهمك</option>
+                                <option value="commerce">متاجر الكترونية</option>
+                                <option value="website">انشاء موقع الكتروني</option>
+                                <option value="ads">اعلانات مدفوعة</option>
+                                <option value="social">ادارة المنصات</option>
+                                <option value="seo">ظهور في نتائج البحث جوجل ( SEO )</option>
+                            </select>
+                        </label>
+                        <label>
+                            الاسم
+                            <input type="text" name="name" placeholder="اسمك الكريم" required>
+                        </label>
+                        <label>
+                            الجوال
+                            <input type="tel" name="phone" placeholder="05XXXXXXXX" required>
+                        </label>
+                        <label>
+                            نبذة سريعة (اختياري)
+                            <textarea name="note" rows="3" placeholder="أخبرنا عن نشاطك وهدفك الأقرب"></textarea>
+                        </label>
+                        <button class="btn btn--teal" type="submit">احجز جلستك المجانية</button>
+                        <p class="form__success">تم استلام طلبك — سنتواصل معك قريبًا.</p>
+                        <p class="form__note">بإرسال النموذج، توافق على تواصل فريق بصمة معك بخصوص استشارتك. بياناتك محفوظة ولن تُشارك مع أي جهة</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="{{ asset('brand/basma-logo-white.png') }}" alt="بصمة">
+                    <p>وكالة نمو رقمي تساعدك على ترك أثر واضح في سوق ينمو بسرعة.</p>
+                </div>
+                <div>
+                    <h4>الحلول</h4>
+                    <ul>
+                        <li><a href="#services">التجارة الإلكترونية</a></li>
+                        <li><a href="#services">المواقع والتحويل</a></li>
+                        <li><a href="#services">الإعلانات المدفوعة</a></li>
+                        <li><a href="#services">المنصات الاجتماعية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>الشركة</h4>
+                    <ul>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#method">المنهجية</a></li>
+                        <li><a href="#work">الأعمال</a></li>
+                        <li><a href="#contact">تواصل</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>تواصل مباشر</h4>
+                    <ul>
+                        <li><a href="mailto:{{ $siteSettings->email }}" dir="ltr">{{ $siteSettings->email }}</a></li>
+                        <li><a href="{{ $siteSettings->phoneHref() }}" dir="ltr">{{ $siteSettings->phone }}</a></li>
+                        <li>{{ $siteSettings->address }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>جميع الحقوق محفوظة © {{ date('Y') }} بصمة</span>
+                <span>Basma Growth Studio</span>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="{{ asset('js/basma.js') }}"></script>
+</body>
+</html>
