@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/basma.css') }}?v=header-struct2">
+    <link rel="stylesheet" href="{{ asset('css/basma.css') }}?v=badge-glow1">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -24,6 +24,7 @@
             <nav class="nav" aria-label="القائمة الرئيسية">
                 <a class="is-active" href="#top">الرئيسية</a>
                 <a href="#services">خدماتنا</a>
+                <a href="#packages">باقاتنا</a>
                 <a href="#work">أعمالنا</a>
                 <a href="#about">من نحن</a>
             </nav>
@@ -48,6 +49,7 @@
             <a class="logo" href="{{ url('/') }}"><img src="{{ asset('brand/basma-logo-white.png') }}" alt="بصمة"></a>
             <a href="#top" data-menu-close>الرئيسية</a>
             <a href="#services" data-menu-close>خدماتنا</a>
+            <a href="#packages" data-menu-close>باقاتنا</a>
             <a href="#work" data-menu-close>أعمالنا</a>
             <a href="#about" data-menu-close>من نحن</a>
             <a class="btn btn--teal" href="#contact" data-menu-close>احجز استشارة مجانية</a>
@@ -206,6 +208,114 @@
             </div>
         </section>
 
+        <section class="section packages" id="packages">
+            <div class="container">
+                <div class="section__head reveal">
+                    <div class="eyebrow">باقاتنا</div>
+                    <h2>باقات إدارة محتوى تناسب مرحلة نموك</h2>
+                    <p>ثلاث باقات واضحة — من بناء الحضور إلى شراكة تسويق متكاملة.</p>
+                </div>
+
+                <div class="packages__grid">
+                    <article class="package reveal">
+                        <h3>باقة الحضور</h3>
+                        <p class="package__price"><strong>1,900</strong> <span>ر.س / شهريًا</span></p>
+                        <ul class="package__list">
+                            <li>إدارة منصة واحدة</li>
+                            <li>12 منشورًا شهريًا، تشمل تصاميم وكاروسيل</li>
+                            <li>4 ريلز، تشمل الفكرة والسيناريو والمونتاج</li>
+                            <li>كتابة المحتوى والكابشنات</li>
+                            <li>خطة محتوى وتقويم نشر شهري</li>
+                            <li>جدولة ونشر المحتوى</li>
+                            <li>تحسين بيانات الحساب والملف التعريفي</li>
+                            <li>إدارة التعليقات والرسائل والرد على استفسارات العملاء</li>
+                            <li>تقرير أداء شهري</li>
+                        </ul>
+                        <button type="button" class="btn btn--ghost package__cta" data-package-open data-package="باقة الحضور">احجز مكانك الآن</button>
+                    </article>
+
+                    <article class="package package--featured reveal">
+                        <div class="package__badges">
+                            <span class="package__badge">الأكثر طلبًا</span>
+                            <span class="package__sale">خصم 29%</span>
+                        </div>
+                        <h3>باقة النمو</h3>
+                        <p class="package__price">
+                            <del aria-label="السعر قبل الخصم">5,499</del>
+                            <strong>3,900</strong>
+                            <span>ر.س / شهريًا</span>
+                        </p>
+                        <ul class="package__list">
+                            <li>إدارة منصتين، مع تكييف المحتوى لكل منصة</li>
+                            <li>16 منشورًا و8 ريلز شهريًا</li>
+                            <li>جلسة تخطيط شهرية</li>
+                            <li>استراتيجية محتوى وأفكار حملات</li>
+                            <li>كتابة المحتوى والسيناريوهات</li>
+                            <li>جدولة ونشر المحتوى</li>
+                            <li>إدارة حملة إعلانية واحدة وتحسينها</li>
+                            <li>إدارة التعليقات والرسائل والرد على استفسارات العملاء</li>
+                            <li>تقرير أداء مع توصيات للشهر التالي</li>
+                        </ul>
+                        <button type="button" class="btn btn--teal package__cta" data-package-open data-package="باقة النمو">احجز مكانك الآن</button>
+                    </article>
+
+                    <article class="package reveal">
+                        <h3>باقة الشراكة</h3>
+                        <p class="package__price"><strong>7,600</strong> <span>ر.س / شهريًا</span></p>
+                        <ul class="package__list">
+                            <li>إدارة 3 منصات، مع تكييف المحتوى لكل منصة</li>
+                            <li>20 منشورًا و12 ريلز شهريًا</li>
+                            <li>جلسة تصوير أو إنتاج محتوى شهري</li>
+                            <li>استراتيجية تسويق ومحتوى شهرية</li>
+                            <li>تحليل المنافسين والجمهور</li>
+                            <li>كتابة المحتوى والسيناريوهات</li>
+                            <li>جدولة ونشر المحتوى</li>
+                            <li>إدارة حملتين إعلانيتين وتحسينهما</li>
+                            <li>إدارة التعليقات والرسائل والرد على استفسارات العملاء</li>
+                            <li>تحسين SEO أساسي للحسابات أو الموقع</li>
+                            <li>اجتماع متابعة شهري</li>
+                            <li>تقرير تفصيلي وخطة تحسين للشهر التالي</li>
+                            <li>أولوية في التنفيذ</li>
+                        </ul>
+                        <button type="button" class="btn btn--ghost package__cta" data-package-open data-package="باقة الشراكة">احجز مكانك الآن</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section addons" id="addons">
+            <div class="container">
+                <div class="addons__layout">
+                    <div class="addons__intro reveal">
+                        <div class="eyebrow">خدمات أخرى وإضافات</div>
+                        <h2>خدمات تُدفع مرة واحدة وتُضاف لأي باقة</h2>
+                        <p>الأسعار تبدأ من الحد الأدنى وتختلف حسب حجم المشروع. تواصل معنا لتحديد المتطلبات وعرض السعر النهائي.</p>
+                        <div class="addons__ticker" aria-label="خصم 10% لمشتركي باقة النمو، و20% لمشتركي باقة الشراكة.">
+                            <div class="addons__ticker-track">
+                                <span dir="rtl">خصم 10% لمشتركي باقة النمو، و20% لمشتركي باقة الشراكة.</span>
+                                <span dir="rtl" aria-hidden="true">خصم 10% لمشتركي باقة النمو، و20% لمشتركي باقة الشراكة.</span>
+                            </div>
+                        </div>
+                        <a class="btn btn--teal" href="#contact">اطلب عرض سعر</a>
+                    </div>
+
+                    <div class="addons__list" role="list">
+                        @forelse ($addons as $index => $addon)
+                            <a class="addon-row reveal" href="#contact" role="listitem">
+                                <span class="addon-row__num">{{ str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) }}</span>
+                                <div class="addon-row__copy">
+                                    <h3>{{ $addon->title }}</h3>
+                                    <p>{{ $addon->description }}</p>
+                                </div>
+                            </a>
+                        @empty
+                            <p class="addons__empty">سيتم إضافة الخدمات الإضافية قريبًا.</p>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="method">
             <div class="container">
                 <div class="section__head reveal">
@@ -290,11 +400,9 @@
                             الاهتمام
                             <select name="interest" required>
                                 <option value="" selected disabled>اختر الخدمة التي تهمك</option>
-                                <option value="commerce">متاجر الكترونية</option>
-                                <option value="website">انشاء موقع الكتروني</option>
-                                <option value="ads">اعلانات مدفوعة</option>
-                                <option value="social">ادارة المنصات</option>
-                                <option value="seo">ظهور في نتائج البحث جوجل ( SEO )</option>
+                                @foreach ($addons as $addon)
+                                    <option value="{{ $addon->title }}">{{ $addon->title }}</option>
+                                @endforeach
                             </select>
                         </label>
                         <label>
@@ -338,6 +446,8 @@
                     <h4>الشركة</h4>
                     <ul>
                         <li><a href="#about">من نحن</a></li>
+                        <li><a href="#packages">باقاتنا</a></li>
+                        <li><a href="#addons">خدمات إضافية</a></li>
                         <li><a href="#method">المنهجية</a></li>
                         <li><a href="#work">الأعمال</a></li>
                         <li><a href="#contact">تواصل</a></li>
@@ -359,6 +469,59 @@
         </div>
     </footer>
 </div>
-<script src="{{ asset('js/basma.js') }}"></script>
+
+<div class="modal" id="package-modal" data-package-modal aria-hidden="true">
+    <div class="modal__backdrop" data-package-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="package-modal-title">
+        <button type="button" class="modal__close" data-package-close aria-label="إغلاق">×</button>
+
+        <div class="modal__body" data-package-form-view>
+            <div class="eyebrow">احجز باقتك</div>
+            <h2 id="package-modal-title">طلب حجز الباقة</h2>
+            <p class="modal__package" data-package-label></p>
+            <p class="modal__lead">اترك بياناتك وسيتواصل معك فريق المبيعات لاستكمال الحجز.</p>
+
+            <form class="form modal__form" data-package-form action="{{ route('leads.store') }}" method="POST">
+                @csrf
+                <input type="hidden" name="interest" data-package-input value="">
+                <label>
+                    الاسم
+                    <input type="text" name="name" placeholder="اسمك الكريم" required maxlength="120">
+                </label>
+                <label>
+                    رقم الهاتف
+                    <input type="tel" name="phone" placeholder="05XXXXXXXX" required maxlength="30">
+                </label>
+                <label>
+                    نوع النشاط
+                    <input type="text" name="note" placeholder="مثال: متجر إلكتروني، عيادة، مطعم…" required maxlength="2000">
+                </label>
+                <button class="btn btn--teal" type="submit">أرسل الطلب</button>
+            </form>
+        </div>
+
+        <div class="modal__success" data-package-success hidden>
+            <div class="modal__success-icon" aria-hidden="true">✓</div>
+            <h2>استلمنا طلبك</h2>
+            <p>أحد من فريق المبيعات بيتواصل معك بأقرب وقت إن شاء الله.</p>
+            <button type="button" class="btn btn--ghost" data-package-close>إغلاق</button>
+        </div>
+    </div>
+</div>
+
+<a
+    class="whatsapp-float"
+    href="https://wa.me/966535815072"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="تواصل عبر واتساب"
+>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16.1 3C9.3 3 3.8 8.4 3.8 15.1c0 2.1.6 4.1 1.6 5.9L3.5 29l8.2-2.1c1.7.9 3.6 1.4 5.5 1.4h0c6.8 0 12.3-5.4 12.3-12.1C29.5 8.4 24 3 16.1 3zm0 22.1h0c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-4.9 1.3 1.3-4.7-.2-.4c-1-1.6-1.5-3.4-1.5-5.2 0-5.5 4.5-10 10.1-10s10.1 4.5 10.1 10-4.5 10.1-10.1 10.1zm5.5-7.5c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9s0-.5.2-.7c.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1.1 2.8 1.2 3 .2.4.1.6c1.5 2.5 3.6 3.5 4.3 3.8.6.3 1.1.2 1.5.2.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.2-.2-.5-.4z"/>
+    </svg>
+</a>
+
+<script src="{{ asset('js/basma.js') }}?v=package-modal1"></script>
 </body>
 </html>
+

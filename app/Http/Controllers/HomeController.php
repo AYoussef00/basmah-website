@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Addon;
 use App\Models\PageVisit;
 use App\Models\SiteSetting;
 use Illuminate\Database\QueryException;
@@ -15,6 +16,7 @@ class HomeController extends Controller
 
         return view('home', [
             'siteSettings' => SiteSetting::current(),
+            'addons' => Addon::query()->active()->ordered()->get(),
         ]);
     }
 

@@ -17,6 +17,7 @@
         </a>
         <nav class="dash-nav">
             <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'is-active' : '' }}">نظرة عامة</a>
+            <a href="{{ route('admin.addons.index') }}" class="{{ request()->routeIs('admin.addons.*') ? 'is-active' : '' }}">الخدمات الإضافية</a>
             <a href="{{ route('admin.settings.edit') }}" class="{{ request()->routeIs('admin.settings.*') ? 'is-active' : '' }}">إعدادات الموقع</a>
             <a href="{{ route('home') }}" target="_blank">عرض الموقع</a>
         </nav>
@@ -29,5 +30,6 @@
     <main class="dash-main">
         @yield('content')
     </main>
+    @stack('scripts')
 </body>
 </html>

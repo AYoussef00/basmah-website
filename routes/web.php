@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AddonController;
+use App\Http\Controllers\Admin\PackageLeadController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
@@ -19,5 +21,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
     Route::get('/dashboard/settings', [SiteSettingController::class, 'edit'])->name('admin.settings.edit');
     Route::put('/dashboard/settings', [SiteSettingController::class, 'update'])->name('admin.settings.update');
+    Route::resource('dashboard/addons', AddonController::class)
+        ->except(['show'])
+        ->names('admin.addons');
+    Route::post('/dashboard/package-leads/{lead}/approve', [PackageLeadController::class, 'approve'])
+        ->name('admin.package-leads.approve');
+    Route::post('/dashboard/package-leads/{lead}/reject', [PackageLeadController::class, 'reject'])
+        ->name('admin.package-leads.reject');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 });
