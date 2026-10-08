@@ -44,6 +44,13 @@ class Certificate extends Model
             return $this->image_path;
         }
 
-        return asset($this->image_path);
+        $path = ltrim($this->image_path, '/');
+        $basePath = request()->getBasePath();
+
+        if ($basePath !== '') {
+            return rtrim($basePath, '/').'/'.$path;
+        }
+
+        return asset($path);
     }
 }
