@@ -81,6 +81,14 @@ class HomeController extends Controller
                 'sort_order' => 3,
                 'is_active' => true,
             ],
+            [
+                'title' => 'Google Partner',
+                'issuer' => 'Google',
+                'image_path' => 'brand/certs/google-partner-badge.jpg',
+                'url' => 'https://www.google.com/partners',
+                'sort_order' => 4,
+                'is_active' => true,
+            ],
         ];
 
         return collect($defaults)

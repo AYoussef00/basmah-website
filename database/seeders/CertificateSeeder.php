@@ -31,6 +31,13 @@ class CertificateSeeder extends Seeder
                 'url' => 'https://www.credential.net/f72e40c7-d5d7-41e4-8197-b3da2524afa0',
                 'sort_order' => 3,
             ],
+            [
+                'title' => 'Google Partner',
+                'issuer' => 'Google',
+                'image_path' => 'brand/certs/google-partner-badge.jpg',
+                'url' => 'https://www.google.com/partners',
+                'sort_order' => 4,
+            ],
         ];
 
         foreach ($certificates as $certificate) {

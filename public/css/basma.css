@@ -1202,13 +1202,16 @@ a.cert-card:hover {
   display: grid;
   place-items: center;
   min-height: 140px;
+  padding: 0.65rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .cert-card__media img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  max-width: 160px;
+  height: 110px;
   object-fit: contain;
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
 }
 
 .cert-card__body h3 {
