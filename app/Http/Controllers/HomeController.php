@@ -84,7 +84,7 @@ class HomeController extends Controller
             [
                 'title' => 'Google Partner',
                 'issuer' => 'Google',
-                'image_path' => 'brand/certs/google-partner-badge.jpg',
+                'image_path' => 'brand/certs/google-partner-badge.png',
                 'url' => 'https://www.google.com/partners',
                 'sort_order' => 4,
                 'is_active' => true,
