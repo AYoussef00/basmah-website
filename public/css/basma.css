@@ -1166,6 +1166,63 @@ textarea {
   max-width: 18rem;
 }
 
+.certs {
+  padding-top: 1rem;
+}
+
+.certs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.cert-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem 1.1rem 1.15rem;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 212, 196, 0.12), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.cert-card:hover {
+  border-color: rgba(0, 212, 196, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.cert-card__media {
+  display: grid;
+  place-items: center;
+  min-height: 140px;
+}
+
+.cert-card__media img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
+}
+
+.cert-card__body h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.cert-card__body p {
+  margin: 0;
+  color: var(--mute);
+  font-size: 0.86rem;
+}
+
 .footer h4 {
   margin: 0 0 0.9rem;
   font-size: 1rem;

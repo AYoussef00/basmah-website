@@ -363,6 +363,27 @@ a { color: inherit; text-decoration: none; }
   margin-top: 0.35rem;
 }
 
+.dash-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dash-preview {
+  margin-bottom: 0.35rem;
+}
+
+.dash-preview img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+}
+
 .dash-top__actions {
   display: flex;
   align-items: center;

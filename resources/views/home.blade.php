@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/basma.css') }}?v=badge-glow1">
+    <link rel="stylesheet" href="{{ asset('css/basma.css') }}?v=certs1">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -424,6 +424,53 @@
                 </div>
             </div>
         </section>
+
+        <section class="section certs" id="certs">
+            <div class="container">
+                <div class="section__head reveal">
+                    <div class="eyebrow">شهاداتنا</div>
+                    <h2>اعتمادات احترافية تعكس جودة عملنا</h2>
+                    <p>شهادات معتمدة نلتزم بها لتقديم حملات وحلول رقمية بمعايير عالمية.</p>
+                </div>
+
+                @if ($certificates->isNotEmpty())
+                    <div class="certs__grid">
+                        @foreach ($certificates as $certificate)
+                            @if ($certificate->url)
+                                <a
+                                    class="cert-card reveal"
+                                    href="{{ $certificate->url }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <div class="cert-card__media">
+                                        <img src="{{ $certificate->imageUrl() }}" alt="{{ $certificate->title }}" loading="lazy">
+                                    </div>
+                                    <div class="cert-card__body">
+                                        <h3>{{ $certificate->title }}</h3>
+                                        @if ($certificate->issuer)
+                                            <p>{{ $certificate->issuer }}</p>
+                                        @endif
+                                    </div>
+                                </a>
+                            @else
+                                <article class="cert-card reveal">
+                                    <div class="cert-card__media">
+                                        <img src="{{ $certificate->imageUrl() }}" alt="{{ $certificate->title }}" loading="lazy">
+                                    </div>
+                                    <div class="cert-card__body">
+                                        <h3>{{ $certificate->title }}</h3>
+                                        @if ($certificate->issuer)
+                                            <p>{{ $certificate->issuer }}</p>
+                                        @endif
+                                    </div>
+                                </article>
+                            @endif
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -448,6 +495,7 @@
                         <li><a href="#about">من نحن</a></li>
                         <li><a href="#packages">باقاتنا</a></li>
                         <li><a href="#addons">خدمات إضافية</a></li>
+                        <li><a href="#certs">شهاداتنا</a></li>
                         <li><a href="#method">المنهجية</a></li>
                         <li><a href="#work">الأعمال</a></li>
                         <li><a href="#contact">تواصل</a></li>

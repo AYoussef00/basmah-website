@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AddonController;
+use App\Http\Controllers\Admin\CertificateController;
 use App\Http\Controllers\Admin\PackageLeadController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Auth\LoginController;
@@ -24,6 +25,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('dashboard/addons', AddonController::class)
         ->except(['show'])
         ->names('admin.addons');
+    Route::resource('dashboard/certificates', CertificateController::class)
+        ->except(['show'])
+        ->names('admin.certificates');
     Route::post('/dashboard/package-leads/{lead}/approve', [PackageLeadController::class, 'approve'])
         ->name('admin.package-leads.approve');
     Route::post('/dashboard/package-leads/{lead}/reject', [PackageLeadController::class, 'reject'])
