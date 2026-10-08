@@ -31,10 +31,6 @@
 
             <div class="header__actions">
                 <a class="btn btn--teal btn--nav" href="#contact">احجز استشارة مجانية</a>
-                <a class="lang-switch" href="#top" aria-label="English">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.4 9h-2.6a15.5 15.5 0 0 0-1.3-5 8.05 8.05 0 0 1 3.9 5zM12 4c.9 0 2.3 2.1 2.9 5H9.1C9.7 6.1 11.1 4 12 4zM4.1 14a8.05 8.05 0 0 1 0-4h2.8a17.4 17.4 0 0 0 0 4zm.5 2h2.6a15.5 15.5 0 0 0 1.3 5 8.05 8.05 0 0 1-3.9-5zM9.1 15h5.8c-.6 2.9-2 5-2.9 5s-2.3-2.1-2.9-5zm5.8-2H9.1a17.4 17.4 0 0 1 0-4h5.8a17.4 17.4 0 0 1 0 4zm.9 7a15.5 15.5 0 0 0 1.3-5h2.6a8.05 8.05 0 0 1-3.9 5zM16.6 9h2.6a8.05 8.05 0 0 0-3.9-5 15.5 15.5 0 0 1 1.3 5zM7.4 4a8.05 8.05 0 0 0-3.9 5h2.6a15.5 15.5 0 0 1 1.3-5z"/></svg>
-                    <span>EN</span>
-                </a>
             </div>
 
             <button class="menu-toggle" type="button" data-menu-toggle aria-label="فتح القائمة">
@@ -53,7 +49,6 @@
             <a href="#work" data-menu-close>أعمالنا</a>
             <a href="#about" data-menu-close>من نحن</a>
             <a class="btn btn--teal" href="#contact" data-menu-close>احجز استشارة مجانية</a>
-            <a class="lang-switch" href="#top" data-menu-close>EN</a>
         </div>
     </div>
 
