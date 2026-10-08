@@ -11,7 +11,8 @@
   --glow: rgba(0, 212, 196, 0.35);
   --font: "Cairo", "Segoe UI", Tahoma, sans-serif;
   --display: "Cairo", "Segoe UI", Tahoma, sans-serif;
-  --container: min(1180px, calc(100% - 2.5rem));
+  --page-gutter: 1.25rem;
+  --container: min(1180px, calc(100% - (var(--page-gutter) * 2)));
   --radius: 18px;
 }
 
@@ -23,6 +24,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -31,11 +34,13 @@ body {
   color: var(--fog);
   background: var(--ink);
   line-height: 1.8;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -53,6 +58,7 @@ textarea {
 
 .container {
   width: var(--container);
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -79,6 +85,8 @@ textarea {
 .site {
   position: relative;
   z-index: 1;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* Header */
@@ -99,6 +107,7 @@ textarea {
 
 .header__inner {
   width: var(--container);
+  max-width: 100%;
   margin-inline: auto;
   min-height: 88px;
   display: flex;
@@ -847,19 +856,28 @@ textarea {
   max-width: 28rem;
 }
 
+.addons__intro,
+.addons__list,
+.addons__layout {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .addons__ticker {
   overflow: hidden;
+  width: 100%;
+  max-width: min(28rem, 100%);
   margin: 0 0 1.1rem;
   padding: 0.85rem 0;
   border-inline-start: 3px solid var(--teal);
   background: rgba(0, 212, 196, 0.06);
   direction: ltr;
-  max-width: 28rem;
 }
 
 .addons__ticker-track {
   display: flex;
   width: max-content;
+  max-width: none;
   animation: addonsTicker 18s linear infinite;
   will-change: transform;
 }
@@ -1265,7 +1283,10 @@ a.cert-card:hover {
   z-index: 90;
   display: grid;
   place-items: center;
-  padding: 1.25rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1289,7 +1310,8 @@ a.cert-card:hover {
   position: relative;
   z-index: 1;
   width: min(100%, 440px);
-  padding: 1.75rem 1.5rem 1.5rem;
+  max-width: 100%;
+  padding: 1.75rem 1.25rem 1.5rem;
   border-radius: 24px;
   border: 1px solid rgba(0, 212, 196, 0.28);
   background:
@@ -1468,6 +1490,10 @@ a.cert-card:hover {
 }
 
 @media (max-width: 980px) {
+  :root {
+    --page-gutter: 1.15rem;
+  }
+
   .nav,
   .header__actions {
     display: none;
@@ -1485,7 +1511,8 @@ a.cert-card:hover {
   .work__grid,
   .packages__grid,
   .addons__layout,
-  .footer__grid {
+  .footer__grid,
+  .certs__grid {
     grid-template-columns: 1fr;
   }
 
@@ -1507,17 +1534,92 @@ a.cert-card:hover {
     justify-self: start;
   }
 
-  .method__grid,
-  .packages__grid {
+  .method__grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .packages__grid {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .mobile-nav__panel {
+    width: min(320px, 88%);
   }
 }
 
 @media (max-width: 640px) {
+  :root {
+    --page-gutter: 1rem;
+  }
+
   .method__grid,
   .work__grid,
-  .packages__grid {
+  .packages__grid,
+  .certs__grid {
     grid-template-columns: 1fr;
+  }
+
+  .header__inner {
+    min-height: 72px;
+    gap: 0.75rem;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section__head {
+    margin-bottom: 1.75rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 6.25rem 0 3.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.85rem, 8.2vw, 2.45rem);
+    line-height: 1.35;
+  }
+
+  .hero h1 .hero__keep {
+    white-space: normal;
+  }
+
+  .hero__lead {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .hero__pills {
+    gap: 0.55rem;
+    width: 100%;
+  }
+
+  .hero__pill {
+    flex: 1 1 calc(50% - 0.55rem);
+    justify-content: center;
+    padding: 0.7rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
   }
 
   .addon-row {
@@ -1525,11 +1627,111 @@ a.cert-card:hover {
     gap: 0.65rem 0.9rem;
   }
 
-  .hero {
-    padding-top: 6.5rem;
+  .about__visual {
+    min-height: 260px;
   }
 
-  .about__visual {
-    min-height: 300px;
+  .package {
+    padding: 1.35rem 1.15rem 1.2rem;
+  }
+
+  .package__badges {
+    position: static;
+    margin-bottom: 0.35rem;
+  }
+
+  .package--featured h3 {
+    margin-top: 0.2rem;
+  }
+
+  .package__price strong {
+    font-size: 1.75rem;
+  }
+
+  .certs__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+
+  .cert-card {
+    padding: 1rem 0.8rem;
+  }
+
+  .cert-card__media {
+    min-height: 110px;
+  }
+
+  .cert-card__media img {
+    max-width: 120px;
+    height: 84px;
+  }
+
+  .cert-card__body h3 {
+    font-size: 0.84rem;
+  }
+
+  .cta__panel {
+    padding: 1.35rem 1.1rem;
+    border-radius: 20px;
+  }
+
+  .form input,
+  .form select,
+  .form textarea {
+    font-size: 16px;
+  }
+
+  .whatsapp-float {
+    right: 0.85rem;
+    bottom: 0.85rem;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer {
+    padding: 2.4rem 0 5.5rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .modal {
+    padding: 0.75rem;
+    align-items: end;
+  }
+
+  .modal__dialog {
+    width: 100%;
+    max-height: min(92dvh, 920px);
+    overflow: auto;
+    border-radius: 22px 22px 16px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__pill {
+    flex: 1 1 100%;
+  }
+
+  .certs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    grid-template-columns: 1fr;
+  }
+
+  .service p,
+  .service__arrow,
+  .service__num,
+  .service h3 {
+    grid-column: auto;
   }
 }
