@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Models\Addon;
+use App\Support\OdooOffers;
 use App\Support\Packages;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -22,6 +23,7 @@ class StoreLeadRequest extends FormRequest
         $allowedInterests = [
             ...Addon::query()->active()->pluck('title')->all(),
             ...Packages::names(),
+            ...OdooOffers::interestOptions(),
         ];
 
         return [

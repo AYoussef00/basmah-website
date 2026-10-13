@@ -8,9 +8,11 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\OdooLandingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/odoo', OdooLandingController::class)->name('odoo');
 Route::post('/leads', [LeadController::class, 'store'])->name('leads.store');
 
 Route::middleware('guest')->group(function () {
